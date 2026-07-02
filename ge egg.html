@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - Senjata utama biar nangkring di halaman 1 Google Bogor -->
+    <title>GK EGG — Distributor & Agen Telur Ayam Ras Petelur Bogor</title>
+    <meta name="description" content="GK EGG menyediakan suplai telur ayam ras petelur fresh langsung dari kandang untuk wilayah Kota Bogor. Melayani grosir per peti untuk agen, katering, dan eceran kg.">
+    <meta name="keywords" content="jual telur bogor, distributor telur bogor, agen telur murah bogor, GK EGG bogor, supplier telur warmindo bogor, telur ayam negeri bogor">
+    
+    <!-- Font Plus Jakarta Sans biar UI kelihatan modern dan clean -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg: #0a0b0d; /* Hitam pekat modern */
+            --card-bg: #13151a; /* Abu-abu gelap kontras tinggi */
+            --accent: #ffb703; /* Warna Kuning-Orange Telur */
+            --accent-glow: rgba(255, 183, 3, 0.25);
+            --text-main: #f4f1ea; /* Putih krem gading super soft */
+            --text-muted: #8e95a5;
+            --tag-color: #ebdcb9; /* Krem hangat untuk info detail */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+            padding-bottom: 100px;
+        }
+
+        /* Navigasi / Header Atas */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 6%;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .location-badge {
+            background: rgba(255, 183, 3, 0.1);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 183, 3, 0.2);
+        }
+
+        /* Hero Section dengan Taktik SEO Heading */
+        .hero {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 6%;
+            text-align: center;
+        }
+
+        .tagline {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-muted);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #ffb703 0%, #fb8500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 580px;
+            margin: 0 auto 40px;
+        }
+
+        /* Bento Grid Katalog */
+        .catalog-container {
+            max-width: 1200px;
+            margin: 60px auto 0;
+            padding: 0 6%;
+        }
+
+        .catalog-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .bento-card {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 440px;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 183, 3, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--accent-glow);
+        }
+
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(30%) contrast(105%);
+            transition: filter 0.4s ease;
+        }
+
+        .bento-card:hover .card-image {
+            filter: grayscale(0%) contrast(100%);
+        }
+
+        .card-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-info h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .specs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .spec-tag {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            color: var(--tag-color);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .card-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .price span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .order-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .bento-card:hover .order-btn {
+            background-color: var(--accent);
+            color: #000000;
+            border-color: var(--accent);
+            transform: scale(1.05);
+        }
+
+        /* Bagian Khusus Buat Bantu Keyword Indexing Google */
+        .seo-footer-text {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 0 6%;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--accent);
+            color: #000000;
+            padding: 16px 28px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px var(--accent-glow);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .floating-cta:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Breakpoint Mobile */
+        @media (max-width: 968px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi / Logo -->
+    <nav>
+        <div class="logo">GK<span> EGG</span></div>
+        <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Area Kota Bogor</div>
+    </nav>
+
+    <!-- Hero Section / Kalimat Headline SEO -->
+    <header class="hero">
+        <div class="tagline">🥚 Supplier & Agen Utama Telur Segar Bogor</div>
+        <h1>Distributor Telur<br><span>GK EGG Bogor</span></h1>
+        <p>Jual beli telur ayam ras petelur pilihan langsung dari peternakan. Segar setiap hari, siap kirim area Kota Bogor, Bogor Tengah, Tanah Sareal, hingga Kabutapen Bogor bersama GK EGG.</p>
+    </header>
+
+    <!-- Katalog Pembelian Model Bento Grid -->
+    <main class="catalog-container">
+        <h2 class="catalog-title">Pilihan Paket Telur Ayam Ras</h2>
+        <div class="bento-grid">
+            
+            <!-- Paket 1: Grosir (Peti) -->
+            <div class="bento-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1516448620398-c5f44bf9f441?q=80&w=500');"></div>
+                <div class="card-body">
+                    <div class="card-info">
+                        <h3>Skala Grosir (Per Peti)</h3>
+                        <p>Pembelian minimal 1 peti (15 kg). Pilihan terbaik untuk agen sembako, pangkalan telur, katering, atau toko roti di area Bogor.</p>
+                        <div class="specs">
+                            <span class="spec-tag">Min. 1 Peti (15kg)</span>
+                            <span class="spec-tag">Harga Kandang</span>
+                            <span class="spec-tag">Bisa Langganan</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">Harga Grosir <span>/ peti</span></div>
+                        <a href="https://wa.me/6287778841826?text=Halo%20GK%20EGG,%20mau%20tanya%20harga%20grosir%20telur%20per%20peti" class="order-btn" target="_blank"><i class="fa-solid fa-truck-ramping"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paket 2: Usaha Kuliner & Warmindo -->
+            <div class="bento-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=500');"></div>
+                <div class="card-body">
+                    <div class="card-info">
+                        <h3>Suplai Kuliner & Warmindo</h3>
+                        <p>Sistem pasokan rutin bulanan/mingguan khusus untuk usaha warung makan, warteg, pembuat martabak, dan Warmindo di Bogor.</p>
+                        <div class="specs">
+                            <span class="spec-tag">Best Seller</span>
+                            <span class="spec-tag">Suplai Rutin</span>
+                            <span class="spec-tag">Free Ongkir*</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">Kontrak Suplai <span>/ usaha</span></div>
+                        <a href="https://wa.me/6287778841826?text=Halo%20GK%20EGG,%20saya%20pemilik%20usaha%20kuliner%20mau%20tanya%20suplai%20rutin" class="order-btn" target="_blank"><i class="fa-solid fa-store"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paket 3: Konsumsi Eceran (Kg) -->
+            <div class="bento-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1587486913049-53fc88980cfc?q=80&w=500');"></div>
+                <div class="card-body">
+                    <div class="card-info">
+                        <h3>Eceran (Per Kilogram)</h3>
+                        <p>Pembelian skala rumah tangga atau konsumsi harian. Telur disortir ketat, dipastikan tidak ada yang retak atau busuk.</p>
+                        <div class="specs">
+                            <span class="spec-tag">Tanpa Min. Order</span>
+                            <span class="spec-tag">Sortir Ketat</span>
+                            <span class="spec-tag">Fresh Tiap Hari</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">Harga Harian <span>/ kg</span></div>
+                        <a href="https://wa.me/6287778841826?text=Halo%20GK%20EGG,%20mau%20tanya%20harga%20eceran%20telur%20hari%20ini" class="order-btn" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Trik SEO Teks Wilayah Bogor (Targeting algoritma Google) -->
+    <section class="seo-footer-text">
+        <p>Layanan jual beli telur ayam ras petelur terpercaya dari GK EGG melayani seluruh kecamatan di Kota dan Kabupaten Bogor: Bogor Utara, Bogor Selatan, Bogor Timur, Bogor Tengah, Bogor Barat, Tanah Sareal, Ciomas, Cibinong, Bojonggede, Parung, Dramaga, hingga Ciawi. Dapatkan suplai telur ayam negeri fresh langsung dari kandang dengan harga terbaik untuk bisnis kuliner, warung sembako, dan kebutuhan rumah tangga Anda sekarang juga.</p>
+    </section>
+
+    <!-- Floating Action Button WhatsApp -->
+    <a href="https://wa.me/6287778841826?text=Halo%20GK%20EGG,%20mau%20tanya%20order%20telur%20ayam" class="floating-cta" target="_blank">
+        <i class="fa-solid fa-whatsapp"></i> Hubungi GK EGG
+    </a>
+
+</body>
+</html>
